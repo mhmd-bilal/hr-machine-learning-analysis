@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(45deg,
+        hsl(270deg 94% 25%) 0%,
+        hsl(221deg 100% 32%) 11%,
+        hsl(215deg 100% 38%) 22%,
+        hsl(209deg 100% 42%) 33%,
+        hsl(204deg 100% 44%) 44%,
+        hsl(197deg 100% 44%) 56%,
+        hsl(189deg 100% 42%) 67%,
+        hsl(178deg 100% 40%) 78%,
+        hsl(168deg 100% 44%) 89%,
+        hsl(158deg 94% 49%) 100%);
+        background-size: 110% 110%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+        .main-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            flex: 1;
+        }
+
+        .left-section {
+            margin-left: -20px;
+            width: 85%;
+            height: 100%;
+            display: block;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .right-section {
+            margin-left: -45px;
+            width: 15%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px; /* Added padding for better spacing */
+            margin-top: -5px;
+        }
+
+        iframe {
+            background-color: white;
+            border: 0px;
+            border-radius: 10px;
+            margin: 5px; /* Adjusted the spacing between charts */
+        }
+
+        .data-card {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px; /* Adjusted the spacing between data cards */
+            width: 100%;
+            box-sizing: border-box;
+            height: 124px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD - HR ANALYSIS</title>
+</head>
+
+<body>
+    <br>
+    <h1 style="color: white;">DASHBOARD - HR ANALYSIS</h1>
+
+    <div class="main-container">
+        <!-- Left Section (Charts) -->
+        <div class="left-section">
+            <!-- Random Forest Accuracy Chart -->
+            <iframe src="accuracy_chart.html" width="440" height="300"></iframe>
+
+            <!-- Correlation Heatmap -->
+            <iframe src="heatmap.html" width="430" height="300"></iframe>
+
+            <!-- Confusion Matrix for Random Forest -->
+            <iframe src="conf_matrix_rf_chart.html" width="300" height="300"></iframe>
+
+            <!-- Confusion Matrix for Logistic Regression -->
+            <iframe src="conf_matrix_logreg_chart.html" width="300" height="300"></iframe>
+
+            <!-- Pair Plot of Selected Features -->
+            <iframe src="pair_plot.html" width="900" height="550"></iframe>
+
+            <!-- Monthly Income Distribution based on Attrition -->
+            <iframe src="box_plot.html" width="600" height="550"></iframe>
+        </div>
+
+        <!-- Right Section (Data Cards) -->
+        <div class="right-section">
+            <div class="data-card">
+                <!-- Add content for Data Card 1 -->
+                <h3>Random Forest Model</h3>
+                <p>87.41%</p>
+            </div>
+            <div class="data-card">
+                <!-- Add content for Data Card 1 -->
+                <h3>Logistic Regression</h3>
+                <p>86.73%</p>
+            </div>
+            <div class="data-card">
+                <!-- Add content for Data Card 1 -->
+                <h3>Total no. Employees</h3>
+                <p>1470</p>
+            </div>
+            <div class="data-card">
+                <!-- Add content for Data Card 1 -->
+                <h3>Predicted Attrition</h3>
+                <p>0.873%</p>
+            </div>
+            <div class="data-card">
+                <!-- Add content for Data Card 1 -->
+                <h3>Average Income</h3>
+                <p>6502.931293</p>
+            </div>
+
+            <div class="data-card">
+                <!-- Add content for Data Card 2 -->
+                <h3>Performance Rating</h3>
+                <p>3.153741497                </p>
+            </div>
+
+            <!-- Add more data cards as needed -->
+        </div>
+    </div>
+</body>
+
+</html>
